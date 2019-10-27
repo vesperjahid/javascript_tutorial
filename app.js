@@ -1,22 +1,24 @@
-let name = "jahid";
-let number = 123;
-let bool = true;
-let language = ['HTML5,CSS,JS'];
-let per = {
-    name: "jahid",
-    id:05907172
-}
+let intro = "welcome to javascript tutorial";
+let name = "Jahid, ";
 
-//date
 
-let date = new Date();
-console.log(typeof name);
-console.log(typeof number);
-//boolean
-console.log(typeof bool);
-//array
-console.log(typeof language);
-//object
-console.log(typeof per);
-//date
-console.log(typeof date);
+// length of string  
+
+let output = intro.length;
+
+// concate of 2 string
+
+output= name.concat(intro);
+
+// uppercase
+
+output = intro.toUpperCase();
+
+// lower
+
+output = name.toLowerCase();
+
+// position of keyword using index
+
+output= intro.indexOf("javascript");
+console.log(output);
