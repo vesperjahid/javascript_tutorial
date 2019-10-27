@@ -1,63 +1,50 @@
-let intro = "welcome to javascript tutorial";
-let name = "Jahid, ";
+///  math formula & function
 
+const num1 = 10.4;
+const num2 = 5.7;
+const num3 = -5;
 
-// length of string  
+let result;
+result = num1 + num2;
+result = num1 - num2;
+result = num1 * num2;
+result = num1 / num2;
+result = num1 % num2;
 
-let output = intro.length;
+/// value of PI
 
-// concate of 2 string
+result = Math.PI;
 
-output= name.concat(intro);
+// round figure any number
 
-// uppercase
+result = Math.round(result);
 
-output = intro.toUpperCase();
+// ceil function to bring value round bt upper
 
-// lower
+result = Math.ceil(num1);
 
-output = name.toLowerCase();
+// floor function to bring value round bt lower
 
-// position of keyword using index
+result = Math.floor(num2);
 
-output= intro.indexOf("javascript");
+///abs function gives us absulate value of positive
 
-//substring  (works from left to right)
+result = Math.abs(num3);
 
-output = intro.substring(4); /// output: ome to javascript tutorial
-output = intro.substring(0,10); /// output: welcome to
+///square finction its works as root
 
-/// slice (works from right to left)
+result = Math.sqrt(9);
 
-output = intro.slice(-6); /// output: tutorial
+// power function
 
-/// slice (works from left to right)
-output = intro.slice(0,10); /// output: tutorial   
+result = Math.pow(num3,3);
 
+/// minimum number from list
 
-/// split 
+result = Math.min(5,2,1,6,7,0,8);
 
-output = intro.split(" ");
+/// maximum number from list
 
-/* output:   
-(4) ["welcome", "to", "javascript", "tutorial"]
-0: "welcome"
-1: "to"
-2: "javascript"
-3: "tutorial"
-*/
+result = Math.max(5,2,1,6,7,0,8);
 
-
-/// Replace 
-
-output = intro.replace("javascript","js");
-
-
-/// include (check string are avaiable or not, return true or false)
-
-output = intro.includes("javascript");
-
-/// Repeat 
-
-output = name.repeat("6");
-console.log(output);
+console.log(result);
