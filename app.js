@@ -1,50 +1,35 @@
-///  math formula & function
+/// convert number
 
-const num1 = 10.4;
-const num2 = 5.7;
-const num3 = -5;
+let number1 = '50',
+    number2 = 10,
+    number3 = 'nine';
 
-let result;
-result = num1 + num2;
-result = num1 - num2;
-result = num1 * num2;
-result = num1 / num2;
-result = num1 % num2;
+    console.log(number1+number2);  /// output : 5010 bcz 50 is string
+    console.log(Number(number1) + number2); //// output : 60  Number () funtion is covert string to number
+    console.log(Number(number3)); /// Output: NaN bcz nine is not a number string
 
-/// value of PI
+//// convert int, float using pharse
 
-result = Math.PI;
+console.log(parseInt(100));  ///output : 100
+console.log(parseInt(1200.222));  /// output : 1200
 
-// round figure any number
+//// float 
 
-result = Math.round(result);
+console.log(parseFloat(22.33));  /// output : 22.33
 
-// ceil function to bring value round bt upper
 
-result = Math.ceil(num1);
+/// to fixed function is fixed how much number after the point
+let num = 100029.43434343;
+console.log(num.toFixed(2));// output : 100029.43
 
-// floor function to bring value round bt lower
 
-result = Math.floor(num2);
+/////convert string
 
-///abs function gives us absulate value of positive
+console.log(typeof num); //// output: number
+console.log(num.length) /// undefined bcz length methord work only string
 
-result = Math.abs(num3);
+let output;
 
-///square finction its works as root
-
-result = Math.sqrt(9);
-
-// power function
-
-result = Math.pow(num3,3);
-
-/// minimum number from list
-
-result = Math.min(5,2,1,6,7,0,8);
-
-/// maximum number from list
-
-result = Math.max(5,2,1,6,7,0,8);
-
-console.log(result);
+output = String(num);
+console.log(typeof output);  //// output : string
+console.log(output.length); //// length is 15
