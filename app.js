@@ -1,40 +1,47 @@
-/// array sort
+////   array object
 
-/// reverse array item
+let Employee = {
+    name: 'Jahidul islam',
+    age: 27,
+    job: 'Web developer',
+    email: 'vesper@muslim.com',
+    favoriteMusic: ['bangla','english','hindi'],
+    living:{
+        City:'Dhaka',
+        Country:"Bangladesh"
+    },
+    bornYear: function(){
+        return new Date().getFullYear() - this.age;
+    },
+    getJob: function(){
+        return this.job;
+    }
+ 
+}
+
+console.log(Employee.name);
+console.log(Employee.age);
+console.log(Employee.job);
+console.log(Employee.email);
+console.log(Employee.favoriteMusic);
+console.log(Employee.favoriteMusic[2]);
+console.log(Employee.living);
+console.log(Employee.living.City);
+console.log(Employee.bornYear());
+console.log(Employee.getJob());
 
 
-const months = new Array('jan','feb','mar','april','may','june');
 
-months.reverse();
+//// another way to create array
 
-// concatenate 2 aray
+let car = [
+    {model:"Toyota", speed:'300cc'},
+    {model:"Xcorola", speed:'250cc'},
+    {model:"oddi", speed: '380cc'}
+];
 
-let num = [1,2,3],
-    num2 = [4,5,6,7];
-
-console.log(num.concat(num2)); /// output: 1,2,3,4,5,6,7
-
-////// order array item
-
-console.log(months.sort()); /// sort by assending order
-
-///// sort by desending order. this is tricky part. if we reverse the assendenting item . it will desending order
-
-console.log(months.sort().reverse());
-
-
-///// number order by lower to grather
-
-let arrayNumber= [1,12,112,2,23,34,56,64,21,456,787,98];
-
-console.log(arrayNumber.sort(function(number1,number2){
-    return number1 - number2;
-}));
-
-
-///// number order by grather to lower
-
-console.log(arrayNumber.sort(function(number1,number2){
-    return number2 - number1;
-}));
-
+for(let i=0;i<car.length;i++){
+    console.log(car[i]);
+    console.log(car[i].model);
+    console.log(car[i].speed);
+}
