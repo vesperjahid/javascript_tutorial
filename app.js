@@ -1,63 +1,47 @@
 /// control sytstement
 
-//// if else
+//// For loop
 
-const age = 16;
-const nationality= "Bangladesh";
-
-if((age>=18) && (nationality =="Bangladesh")){
-    console.log("you can vote");
-}else{
-    console.log("you are under 18");
+for(let i=0;i<=10;i++){
+    if(i==2)
+    continue;
+    console.log(i);
 }
 
-///// if else using ternary operator
-
-console.log(age>=18?"you are adult":`you are only ${age}`);
-
-
-
-///////////// Switch case
-
-const paymentMethord = "card";
-
-switch(paymentMethord){
-    case 'cash': 
-        console.log(`${paymentMethord} is selected`);
-        break;
-    case 'check':
-        console.log("we will check & infrom");
-        break;
-    case 'card':
-        console.log(`${paymentMethord} is selected,  Payment proccessing`);
-        break;
-    default:
-        console.log(" Please select  valid payment methord");
+for(let i=0;i<=10;i++){
+    if(i==2)
+    break;
+    console.log(i);
 }
 
 
-/// another example
+//// while loop
 
-const cars = ['Hybrid','toyota','lamvorgini','Oddi'];
+const product = ['book','pen','dairy'];
 
-let selectcar = String(1);
-let car;
+let i=0
+while(i<product.length){
+    console.log(product[i]);
+    i++;
 
-switch(selectcar){
-    case '0':
-        car = cars[0];
-        break;
-    case '1':
-        car = cars[1];
-            break;
-    case '2':
-        car = cars[2];
-            break;
-     case '3':
-        car = cars[2];
-            break;
-    default:
-        car = "Please, select a valid car";
 }
 
-console.log(car);
+/// for each
+
+product.forEach(function(assingnment, index){
+    console.log(`${index}:${assingnment}`);
+});
+
+/// data retrive from object
+
+const emp = {
+    name:"jahid",
+    age : 25,
+    job : "web development",
+    skill : ['html','css','js','php'],
+    nationality: "Bangladesh"
+}
+
+for(let key in emp){
+    console.log(emp[key]);
+}
