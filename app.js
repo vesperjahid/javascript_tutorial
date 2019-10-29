@@ -1,22 +1,63 @@
-//date of js
+/// control sytstement
 
-// create object for date
+//// if else
 
-const today = new Date();
-let output;
+const age = 16;
+const nationality= "Bangladesh";
 
-output = new Date('auguest 17 1992');  ///  month day year
+if((age>=18) && (nationality =="Bangladesh")){
+    console.log("you can vote");
+}else{
+    console.log("you are under 18");
+}
 
-output = today.getMonth();
-output = today.getDay();  ////0 = sunday, 1 = monday so on
-output = today.getFullYear();
-output = today.getHours();
-output = today.getMinutes();
-output = today.getSeconds();
-today.setMonth(5);
-output = today.getMonth();
-today.setFullYear(2000);
-output = today.getFullYear();
+///// if else using ternary operator
+
+console.log(age>=18?"you are adult":`you are only ${age}`);
 
 
-console.log(output);
+
+///////////// Switch case
+
+const paymentMethord = "card";
+
+switch(paymentMethord){
+    case 'cash': 
+        console.log(`${paymentMethord} is selected`);
+        break;
+    case 'check':
+        console.log("we will check & infrom");
+        break;
+    case 'card':
+        console.log(`${paymentMethord} is selected,  Payment proccessing`);
+        break;
+    default:
+        console.log(" Please select  valid payment methord");
+}
+
+
+/// another example
+
+const cars = ['Hybrid','toyota','lamvorgini','Oddi'];
+
+let selectcar = String(1);
+let car;
+
+switch(selectcar){
+    case '0':
+        car = cars[0];
+        break;
+    case '1':
+        car = cars[1];
+            break;
+    case '2':
+        car = cars[2];
+            break;
+     case '3':
+        car = cars[2];
+            break;
+    default:
+        car = "Please, select a valid car";
+}
+
+console.log(car);
