@@ -1,17 +1,14 @@
-///// try catch
-try{
-    something();
-}catch(error){
-    console.log(error);
-}
-finally{
-    console.log("competition start");
-}
+/////  window
 
-function go(){
-    console.log("starting");
-    setTimeout(function reached(){
-console.log("Reched...");
-    },3000);
-}
-go();
+let height, width;
+
+height = window.outerHeight;
+width = window.outerWidth;
+
+
+height = window.innerHeight;
+width = window.innerWidth;
+
+console.log(height);
+console.log(width);
+
