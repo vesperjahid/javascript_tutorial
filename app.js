@@ -1,12 +1,25 @@
-//// constant in array
-
-const num = [1,2,3];
-// const change is changeable bt indevisual
-num[0]= 4;
-
-/// also insert data
-
-num.push(7);
+/// function  of js
 
 
-console.log(num)
+///  basic function declaration
+
+function helloworld(){
+    console.log("Hello world");
+}
+
+helloworld();
+
+///// function with perametters
+
+function greetings(name){
+    console.log("hello "+name+" , welcome to our site");
+}
+
+greetings("vesper");
+
+//// function with default pearmetters
+
+function visitors(user='',site='demo'){
+    console.log("welcome "+user+" to "+site);
+}
+visitors('vesper');
