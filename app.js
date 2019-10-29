@@ -1,25 +1,57 @@
 /// function  of js
 
 
-///  basic function declaration
+///  basic function expression
 
-function helloworld(){
-    console.log("Hello world");
+// addition
+
+function addition(num1='0',num2='0'){
+    return Number(num1) + Number(num2);
 }
 
-helloworld();
+console.log(addition(12,10));
+console.log(addition(1,15));
+console.log(addition(2,1));
 
-///// function with perametters
 
-function greetings(name){
-    console.log("hello "+name+" , welcome to our site");
+/// modulus 
+
+function checkNumber(Number=0){
+    return Number%2
+}
+if(checkNumber(8)==0){
+    console.log("enen");
+}else{
+    console.log("Odd");
 }
 
-greetings("vesper");
 
-//// function with default pearmetters
+/// imvoked function
 
-function visitors(user='',site='demo'){
-    console.log("welcome "+user+" to "+site);
+(function(name){
+    console.log("hello "+name);
+})("vesper")
+
+
+///// function with methord
+
+const musicplayer = {
+    play: function(id){
+        console.log(`Music play with id ${id}`);
+    },
+    pause: function(){
+        console.log('pause');
+    }
 }
-visitors('vesper');
+
+musicplayer.play(20);
+
+musicplayer.pause();
+
+//// can be create methord out side the function
+
+musicplayer.remove = function(id){
+    console.log(`${id} is removed from playlist`);
+}
+
+musicplayer.remove(20);
