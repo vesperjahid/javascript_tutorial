@@ -1,35 +1,37 @@
-/// convert number
+/// Template design old methord
 
-let number1 = '50',
-    number2 = 10,
-    number3 = 'nine';
-
-    console.log(number1+number2);  /// output : 5010 bcz 50 is string
-    console.log(Number(number1) + number2); //// output : 60  Number () funtion is covert string to number
-    console.log(Number(number3)); /// Output: NaN bcz nine is not a number string
-
-//// convert int, float using pharse
-
-console.log(parseInt(100));  ///output : 100
-console.log(parseInt(1200.222));  /// output : 1200
-
-//// float 
-
-console.log(parseFloat(22.33));  /// output : 22.33
+const product1 = 'Pizza',
+      price1 = 80,
+      product2 = 'Burger',
+      price2 = 60;
 
 
-/// to fixed function is fixed how much number after the point
-let num = 100029.43434343;
-console.log(num.toFixed(2));// output : 100029.43
+      let html;
+
+      html = '<ul>'+
+                '<li>Item :' + product1 + '</li>' +
+                '<li>Price :' + price1 + '</li>' +
+                '<li>Item :' + product2 + '</li>' +
+                '<li>Price :' + price2 + '</li>' +
+                '<li>Total = ' + (price1+price2) + '</li>' +
+             '</ul>';
 
 
-/////convert string
+/////// Template  string or template literales
 
-console.log(typeof num); //// output: number
-console.log(num.length) /// undefined bcz length methord work only string
+html = `
+    <ul>
+        <li>Item: ${product1}</li>
+        <li>Price: ${price1}</li>
+        <li>Item: ${product2}</li>
+        <li>Price: ${price2}</li>
+        <li>Total: ${price1+price2}</li>
+    </ul>
+`;
 
-let output;
+/*
+    The new way is more clean & user friendly.
+*/
 
-output = String(num);
-console.log(typeof output);  //// output : string
-console.log(output.length); //// length is 15
+let app = document.querySelector('#templateapp');
+app.innerHTML = html;
