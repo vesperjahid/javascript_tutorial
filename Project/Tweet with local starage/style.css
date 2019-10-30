@@ -68,8 +68,21 @@
     background:#26908b;
     max-width: 300px;
     margin: 1em;
+    list-style: none;
 }
 .content .showTweet .tweet-list:nth-child(even){
     background: #a72240;
-
 }
+.remove-tweet{
+   float: right;
+   color: thistle;
+   padding-left: 5px;
+   font-weight: bolder;
+   font-size: 1.2em;
+   font-family: Verdana, Geneva, Tahoma, sans-serif;
+   cursor: pointer;
+}
+.remove-tweet:hover{
+    color: chocolate;
+    transition: 0.5s;
+ }
