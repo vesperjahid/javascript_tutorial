@@ -48,6 +48,8 @@ function newTweet(e){
 
     // add to local storage
     addtolocalstorage(tweet);
+
+    this.reset();
 }
 
 //// remove tweet from the dom
